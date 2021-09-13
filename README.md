@@ -6,3 +6,5 @@ https://github.com/afshinrahmati/typeScript/blob/1.0.3/app.ts
 https://github.com/afshinrahmati/typeScript/blob/1.0.4/app.ts
 ### Lesson_4:  array,tuple,BypassRules type with push
 https://github.com/afshinrahmati/typeScript/blob/1.0.5/app.ts
+### Lesson_5:  enum
+https://github.com/afshinrahmati/typeScript/blob/1.0.6/app.ts

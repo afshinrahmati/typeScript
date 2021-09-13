@@ -1,10 +1,17 @@
-// [number,string] ==> tuple
-// srting[] ==> array
+var Role;
+(function (Role) {
+    Role["ADMIN"] = "admin";
+    Role[Role["READ_ONLY"] = 100] = "READ_ONLY";
+    Role["AUTHOR"] = "author";
+})(Role || (Role = {}));
+;
 var person = {
     name: 'Maximilian',
     age: 30,
     hobbies: ['Cooking', 'ReadBook'],
-    role: [1, "superAdmin"]
+    role: Role.ADMIN
 };
-person.role.push("admin");
+if (person.role === "admin") {
+    console.log(Role.ADMIN);
+}
 console.log(person);
