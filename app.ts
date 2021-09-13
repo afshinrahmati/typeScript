@@ -1,13 +1,17 @@
-// usually we use enum on folder types like ==> export enum Role{}
-enum Role { ADMIN = 'admin', READ_ONLY = 100, AUTHOR = 'author' };
-const person: { name: string, age: number, hobbies: string[], role: Role } = {
-    name: 'Maximilian',
-    age: 30,
-    hobbies: ['Cooking', 'ReadBook'],
-    role: Role.ADMIN
+//Union Type that's mean ==> we use more than 1 type like input2:string | number
+// | this name is 'pipe'
+function combine(input1: number | string, input2: number | string, resultConversion: string) {
+
+    let result;
+    if (typeof input1 === "number" && typeof input2 === "number") {
+        result = input1 + input2
+    } else {
+        result = input2.toString() + input1.toString()
+    }
+
 };
-if (person.role === "admin"){
-    console.log(Role.ADMIN);
-    
-}
-console.log(person);
+const combinedNumber = combine(10, 32, 'as-number');
+const combinedString = combine("afshin", "rahmati", 'as-text');
+console.log(combinedNumber, combinedString);
+// Literal Type that's mean ==> usuall type
+const number = 5;
