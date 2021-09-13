@@ -10,3 +10,5 @@ https://github.com/afshinrahmati/typeScript/blob/1.0.5/app.ts
 https://github.com/afshinrahmati/typeScript/blob/1.0.6/app.ts
 ### Lesson_6:  |,Union Type,Literal Type
 https://github.com/afshinrahmati/typeScript/blob/1.0.7/app.ts
+### Lesson_7:  alias,void
+https://github.com/afshinrahmati/typeScript/blob/1.0.8/app.ts
