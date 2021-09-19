@@ -1,22 +1,26 @@
 class Departmen {
-  name: string
-  constructor(n: string) {
-    this.name = n
-  }
+  private employees: string[] = []
+  constructor(private id: number, public name: string, readonly age: number) {}
 
   describe(this: Departmen) {
-    console.log('Hello function with out function', this.name)
+    console.log(
+      'Hello function with out function',
+      this.name + this.id + this.age,
+    )
+  }
+  addEmployees(employees: string) {
+    this.employees.push(employees)
+    // it is wrong becase age is read only
+    // this.age = 85
+  }
+  printEmployees() {
+    console.log(this.employees.length, this.employees)
   }
 }
 
-// when we use constructor for use this we should use new
-const accounting = new Departmen('Afshin')
-console.log(accounting)
-// function
-accounting.describe() // this a fu
-// How to install prettier
-// 1 ==> npm install prettier -D --save-exact
-// 2 ==>. click right then choose format document with then  configh defult formater then choose
-// How to install eslint
-// 1 ==> go to this webSite https://www.digitalocean.com/community/tutorials/linting-and-formatting-with-eslint-in-vs-code
-// 2 ==> all the code in file .eslintsrc is exist you should use
+const accounting = new Departmen(15, 'Afshin', 18)
+
+accounting.addEmployees('afshin')
+accounting.addEmployees('Max')
+accounting.describe()
+accounting.printEmployees()

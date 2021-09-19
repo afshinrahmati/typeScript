@@ -37,3 +37,7 @@ https://github.com/afshinrahmati/typeScript/blob/1.0.10/src/app.ts
 ### Lesson_10: install eslnt and prettier AND class constructor
 
 https://github.com/afshinrahmati/typeScript/blob/1.0.11/src/app.ts
+
+### Lesson_11: Variable withc constructor and Type ReadOnly
+
+https://github.com/afshinrahmati/typeScript/blob/1.0.12/src/app.ts
