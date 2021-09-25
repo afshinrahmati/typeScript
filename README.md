@@ -41,3 +41,7 @@ https://github.com/afshinrahmati/typeScript/blob/1.0.11/src/app.ts
 ### Lesson_11: Variable withc constructor and Type ReadOnly
 
 https://github.com/afshinrahmati/typeScript/blob/1.0.12/src/app.ts
+
+### Lesson_12: static,connect to constructor dad and use constructor child and abstract
+
+https://github.com/afshinrahmati/typeScript/blob/1.0.13/src/app.ts
