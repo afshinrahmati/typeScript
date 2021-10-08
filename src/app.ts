@@ -1,34 +1,18 @@
-interface Bird {
-  type: 'bird'
-  flyingSpeed: number
-}
+// generic <>
+const names: string[] = ['afshin', 'amir', 'majid']
+const users: Array<string | number> = []
+names[0].split('')
 
-interface Horse {
-  type: 'horse'
-  runnigSpeed: number
-}
+console.log(names)
 
-type Animal = Bird | Horse
+const promise: Promise<any> = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log(12)
 
-function moveAnimal(animal: Animal) {
-  let speed
-
-  switch (animal.type) {
-    case 'bird':
-      speed = animal.type
-      console.log(`${animal.flyingSpeed} id Bird`)
-      break
-    case 'horse':
-      speed = animal.type
-      console.log(`${animal.runnigSpeed} id Horse`)
-      break
-    default:
-      console.log('Dont exit')
-      break
-  }
-
-  console.log(`${speed} is winner`)
-}
-moveAnimal({ type: 'bird', flyingSpeed: 20 })
-
-const paragraph = document.querySelector('p')
+    resolve('This is done')
+  }, 3000)
+  console.log(45)
+})
+promise.then((data) => {
+  data.split(' ')
+})

@@ -57,3 +57,7 @@ https://github.com/afshinrahmati/typeScript/blob/1.0.15/src/app.ts
 ### Lesson_15: discriminated Union
 
 https://github.com/afshinrahmati/typeScript/blob/1.0.16/src/app.ts
+
+### Lesson_16: generic
+
+https://github.com/afshinrahmati/typeScript/blob/1.0.17/src/app.ts
