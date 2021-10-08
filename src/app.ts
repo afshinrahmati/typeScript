@@ -1,36 +1,34 @@
-//  interface Just for Highlighting Type we casn't give value
-interface Person {
+// type intersection
+type Admin = {
   name: string
-  age: number
-  greet(phrase: string): void
+  privileges: string[]
 }
 
-let user1: Person
-
-user1 = {
-  name: 'Afshin',
-  age: 21,
-  greet(phrase: string) {
-    console.log(`${phrase} ${this.name}`)
-  },
-}
-user1.greet('Hi i a m')
-//  STEP 2: what Difference interface and type
-//  Type Perso n = {name:string,age:number,greet(x:string)} we can use union inb type
-// and intersfaces are obvious AND we can use interface on class
-// class x implements Person{}
-
-class Persons implements Person {
+type Employee = {
   name: string
-  age = 21
-  constructor(n: string) {
-    this.name = n
+  starDate: Date
+}
+
+type ElevatedEmployee = Admin & Employee
+
+const user1: ElevatedEmployee = {
+  name: 'afshin',
+  privileges: ['WebSeveloper'],
+  starDate: new Date(),
+}
+
+console.log(user1)
+
+// guard ==> in
+type unKnownEmployee = Employee | Admin
+
+function printEmployeeInformation(emp: unKnownEmployee) {
+  console.log(`${emp.name} Name`)
+  if ('privileges' in emp) {
+    console.log(`${emp.privileges} privileges`)
   }
-  greet(phrase: string) {
-    console.log(phrase + ' ' + this.name)
+
+  if ('starDate' in emp) {
+    console.log(`${emp.starDate} StartDate`)
   }
 }
-let user2: Person
-user2 = new Persons('Afi')
-user2.greet('Salam')
-console.log(user2)

@@ -49,3 +49,7 @@ https://github.com/afshinrahmati/typeScript/blob/1.0.13/src/app.ts
 ### Lesson_13: interface,Difference between interface and type
 
 https://github.com/afshinrahmati/typeScript/blob/1.0.14/src/app.ts
+
+### Lesson_14: type intersection & type guard
+
+https://github.com/afshinrahmati/typeScript/blob/1.0.15/src/app.ts
