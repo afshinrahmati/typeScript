@@ -1,34 +1,34 @@
-// type intersection
-type Admin = {
-  name: string
-  privileges: string[]
+interface Bird {
+  type: 'bird'
+  flyingSpeed: number
 }
 
-type Employee = {
-  name: string
-  starDate: Date
+interface Horse {
+  type: 'horse'
+  runnigSpeed: number
 }
 
-type ElevatedEmployee = Admin & Employee
+type Animal = Bird | Horse
 
-const user1: ElevatedEmployee = {
-  name: 'afshin',
-  privileges: ['WebSeveloper'],
-  starDate: new Date(),
-}
+function moveAnimal(animal: Animal) {
+  let speed
 
-console.log(user1)
-
-// guard ==> in
-type unKnownEmployee = Employee | Admin
-
-function printEmployeeInformation(emp: unKnownEmployee) {
-  console.log(`${emp.name} Name`)
-  if ('privileges' in emp) {
-    console.log(`${emp.privileges} privileges`)
+  switch (animal.type) {
+    case 'bird':
+      speed = animal.type
+      console.log(`${animal.flyingSpeed} id Bird`)
+      break
+    case 'horse':
+      speed = animal.type
+      console.log(`${animal.runnigSpeed} id Horse`)
+      break
+    default:
+      console.log('Dont exit')
+      break
   }
 
-  if ('starDate' in emp) {
-    console.log(`${emp.starDate} StartDate`)
-  }
+  console.log(`${speed} is winner`)
 }
+moveAnimal({ type: 'bird', flyingSpeed: 20 })
+
+const paragraph = document.querySelector('p')

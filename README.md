@@ -53,3 +53,7 @@ https://github.com/afshinrahmati/typeScript/blob/1.0.14/src/app.ts
 ### Lesson_14: type intersection & type guard
 
 https://github.com/afshinrahmati/typeScript/blob/1.0.15/src/app.ts
+
+### Lesson_15: discriminated Union
+
+https://github.com/afshinrahmati/typeScript/blob/1.0.16/src/app.ts
