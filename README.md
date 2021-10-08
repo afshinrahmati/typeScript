@@ -45,3 +45,7 @@ https://github.com/afshinrahmati/typeScript/blob/1.0.12/src/app.ts
 ### Lesson_12: static,connect to constructor dad and use constructor child and abstract
 
 https://github.com/afshinrahmati/typeScript/blob/1.0.13/src/app.ts
+
+### Lesson_13: interface,Difference between interface and type
+
+https://github.com/afshinrahmati/typeScript/blob/1.0.14/src/app.ts

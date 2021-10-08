@@ -1,58 +1,36 @@
-abstract class Department {
-  abstract describe(this: Department): void
-  static fiscalYear = 2000
-  protected employees: string[] = []
-  constructor(
-    protected id: number,
-    public name: string,
-    readonly age: number,
-  ) {}
-  init() {
-    console.log(this.describe())
-  }
-  addEmployees(employees: string) {
-    this.employees.push(employees)
-  }
-
-  printEmployees() {
-    console.log(this.employees.length, this.employees)
-  }
-
-  static createEmployee(name: string) {
-    return { name }
-  }
+//  interface Just for Highlighting Type we casn't give value
+interface Person {
+  name: string
+  age: number
+  greet(phrase: string): void
 }
 
-class AccountingDepartment extends Department {
-  private lastReport: string
+let user1: Person
 
-  constructor(id: number, private reports: string[]) {
-    // super for connect constarctor dad
-    // when we use super all this is for constarcror dad ,now this.id = id constartcror dadchange with child
-    super(1, 'amir', 2)
-    this.id = id
+user1 = {
+  name: 'Afshin',
+  age: 21,
+  greet(phrase: string) {
+    console.log(`${phrase} ${this.name}`)
+  },
+}
+user1.greet('Hi i a m')
+//  STEP 2: what Difference interface and type
+//  Type Perso n = {name:string,age:number,greet(x:string)} we can use union inb type
+// and intersfaces are obvious AND we can use interface on class
+// class x implements Person{}
 
-    this.lastReport = reports[0]
+class Persons implements Person {
+  name: string
+  age = 21
+  constructor(n: string) {
+    this.name = n
   }
-  // abstract
-  describe() {
-    return 'aFsHiN'
+  greet(phrase: string) {
+    console.log(phrase + ' ' + this.name)
   }
 }
-//1 static
-const employees1 = Department.createEmployee('afshin')
-console.log(employees1, Department.fiscalYear)
-//2 connct to constarctor dad with Super and chhnage this
-const testProtect1 = new AccountingDepartment(12, ['afi'])
-const testProtect2 = testProtect1.describe()
-
-console.log(testProtect2)
-
-//* $$$$$$$$ static $$$$$$$$$$
-// noticed 1 ==> when you use static in your class  you can use on constructor becase constructor is not a static
-// noticed 2 ==> when we use static else we don't need new for call it (Department.createEmployee('afshin'))
-//* $$$$$$protected$$$$
-// noticed 1 ==> protected use all class
-// $$$$$$ abstract $$$$$$
-// for had to  do this function on other child
-// and we didnot write any thing in abstract class becases it is Responsible child
+let user2: Person
+user2 = new Persons('Afi')
+user2.greet('Salam')
+console.log(user2)
