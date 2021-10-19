@@ -61,3 +61,7 @@ https://github.com/afshinrahmati/typeScript/blob/1.0.16/src/app.ts
 ### Lesson_16: generic
 
 https://github.com/afshinrahmati/typeScript/blob/1.0.17/src/app.ts
+
+### Lesson_17: make validator
+
+https://github.com/afshinrahmati/typeScript/blob/1.0.18/src/app.ts
